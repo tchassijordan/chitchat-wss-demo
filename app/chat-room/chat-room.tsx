@@ -21,7 +21,26 @@ import { toast } from "react-toastify";
 export function ChatRoom() {
   useSyncChatSocketQuery();
 
-  return <ChatBox />;
+  return (
+    <div className="flex justify-center gap-4 mb-4 bg-gray-50 p-4">
+      <Card className="w-full max-w-sm h-fit mt-18">
+        <CardHeader className="">
+          <CardTitle className="text-lg flex flex-col">
+            <span className="text-gray-500 text-sm font-normal">Advisor</span>
+            <span>Charlie Munger</span>
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="">
+          <div className="flex gap-4 text-sm">
+            <span>Capital 9</span>
+            <span>Market 8</span>
+            <span>Model 9</span>
+          </div>
+        </CardContent>
+      </Card>
+      <ChatBox />
+    </div>
+  );
 }
 
 function ChatBox() {
@@ -53,8 +72,8 @@ function ChatBox() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50 p-4">
-      <Card className="w-full max-w-2xl h-[80vh] flex flex-col">
+    <div className="flex items-center justify-center min-h-screen">
+      <Card className="w-2xl h-[80vh] flex flex-col">
         <CardHeader className="border-b">
           <div className="flex items-center justify-between">
             <CardTitle>Chat Room</CardTitle>
