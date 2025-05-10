@@ -19,8 +19,6 @@ import { Send } from "lucide-react";
 import { toast } from "react-toastify";
 
 export function ChatRoom() {
-  useSyncChatSocketQuery();
-
   return (
     <div className="bg-gray-50 p-4 min-h-screen-content">
       <div className="text-center mb-10">
@@ -72,10 +70,10 @@ function ChatBox() {
 
     if (!input.trim()) return;
 
-    chatSocket.send(input);
     chatService.util.updateQueryData("syncChatSocket", undefined, (draft) => {
       draft.push(input);
     });
+    chatSocket.send(input);
     setInput("");
   };
 
