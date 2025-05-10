@@ -1,6 +1,6 @@
 import rtkQueryApiClient from "./rtkQueryApiClient";
 
-const chatSocket = new WebSocket(import.meta.env.VITE_CHAT_WSS_URL);
+export const chatSocket = new WebSocket(import.meta.env.VITE_CHAT_WSS_URL);
 
 export const chatService = rtkQueryApiClient.injectEndpoints({
   endpoints: (builder) => ({
@@ -23,13 +23,15 @@ export const chatService = rtkQueryApiClient.injectEndpoints({
             });
           };
 
-          chatSocket.addEventListener("message", listener);
-
           setTimeout(() => {
-            // console.log("What is your name?");
-            chatSocket.send("What is your name?");
-            // ws.dispatchEvent(new MessageEvent("message", { data: ws.url }));
-          }, 5_000);
+            chatSocket.send("Hello");
+
+            updateCachedData((draft) => {
+              draft.push("Hello");
+            });
+          }, 1_000);
+
+          chatSocket.addEventListener("message", listener);
         } catch (error) {
           console.error(error);
         }
