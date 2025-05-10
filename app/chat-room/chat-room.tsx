@@ -22,23 +22,31 @@ export function ChatRoom() {
   useSyncChatSocketQuery();
 
   return (
-    <div className="flex justify-center gap-4 mb-4 bg-gray-50 p-4">
-      <Card className="w-full max-w-sm h-fit mt-18">
-        <CardHeader className="">
-          <CardTitle className="text-lg flex flex-col">
-            <span className="text-gray-500 text-sm font-normal">Advisor</span>
-            <span>Charlie Munger</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="">
-          <div className="flex gap-4 text-sm">
-            <span>Capital 9</span>
-            <span>Market 8</span>
-            <span>Model 9</span>
-          </div>
-        </CardContent>
-      </Card>
-      <ChatBox />
+    <div className="bg-gray-50 p-4 min-h-screen-content">
+      <div className="text-center mb-10">
+        <h1 className="text-3xl font-semibold text-gray-900">
+          Welcome to ChitChat
+        </h1>
+        <p className="mt-2 text-gray-600 mb-0">Connect and chat in real-time</p>
+      </div>
+      <div className="flex justify-center items-start gap-4 mb-4">
+        <Card className="w-full max-w-sm h-fit">
+          <CardHeader className="">
+            <CardTitle className="text-lg flex flex-col">
+              <span className="text-gray-500 text-sm font-normal">Advisor</span>
+              <span>Charlie Munger</span>
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="">
+            <div className="flex gap-4 text-sm">
+              <span>Capital 9</span>
+              <span>Market 8</span>
+              <span>Model 9</span>
+            </div>
+          </CardContent>
+        </Card>
+        <ChatBox />
+      </div>
     </div>
   );
 }
@@ -72,8 +80,8 @@ function ChatBox() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <Card className="w-2xl h-[80vh] flex flex-col">
+    <div className="flex items-center justify-center">
+      <Card className="w-2xl h-[70vh] flex flex-col">
         <CardHeader className="border-b">
           <div className="flex items-center justify-between">
             <CardTitle>Chat Room</CardTitle>
