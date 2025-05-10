@@ -1,87 +1,40 @@
-# Welcome to React Router!
+# Chat Application
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A modern, real-time chat application built with React and WebSocket.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Quick Start Guide
 
-## Features
+### Prerequisites
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+Before you begin, make sure you have:
 
-## Getting Started
+1. [Node.js](https://nodejs.org/) installed on your computer
+   - Download and install from the official website
+   - Choose the "LTS" (Long Term Support) version
 
-### Installation
+### Getting Started
 
-Install the dependencies:
+1. **Download the Project**
 
-```bash
-npm install
-```
+   - Click the green "Code" button at the top of this page
+   - Select "Download ZIP" or use Git to clone the repository
 
-### Development
+2. **Install Dependencies**
 
-Start the development server with HMR:
+   - Open your terminal/command prompt
+   - Navigate to the project folder
+   - Run this command:
 
-```bash
-npm run dev
-```
+   ```bash
+   npm install
+   ```
 
-Your application will be available at `http://localhost:5173`.
+   - Wait for the installation to complete (this might take a few minutes)
 
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+3. **Run the Project in DEV**
+   - In the same terminal window, run:
+   ```bash
+   npm run dev
+   ```
+   - The application will start and be available at `http://localhost:5173`
+   - Open this address in your web browser to see the application
