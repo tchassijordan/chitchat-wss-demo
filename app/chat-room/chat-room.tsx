@@ -17,6 +17,7 @@ import { Input } from "~/components/ui/input";
 import { Badge } from "~/components/ui/badge";
 import { Send } from "lucide-react";
 import { toast } from "react-toastify";
+import store from "~/store";
 
 export function ChatRoom() {
   return (
@@ -70,9 +71,11 @@ function ChatBox() {
 
     if (!input.trim()) return;
 
-    chatService.util.updateQueryData("syncChatSocket", undefined, (draft) => {
-      draft.push(input);
-    });
+    store.dispatch(
+      chatService.util.updateQueryData("syncChatSocket", undefined, (draft) => {
+        draft.push(input);
+      })
+    );
     chatSocket.send(input);
     setInput("");
   };
